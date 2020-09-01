@@ -45,10 +45,22 @@ class Connection
             {
                 return $result_set;
             }
+
+                return null;
         }
         else
         {
-            die('query failed');
+            die('query failed'. self::$conn->error);
         }
+    }
+
+    public static function get_connection()
+    {
+        return self::$conn;
+    }
+
+    public static function close_Connection()
+    {
+        self::$conn->close();
     }
 }

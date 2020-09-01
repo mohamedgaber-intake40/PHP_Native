@@ -31,7 +31,7 @@ class Database extends Connection
         }
         else
         {
-            die('query failed');
+            die('query failed '. self::$conn->error);
         }
     }
 
@@ -46,7 +46,7 @@ class Database extends Connection
         }
         else
         {
-            die('query failed');
+            die('query failed'. self::$conn->error);
         }
     }
 
@@ -61,7 +61,7 @@ class Database extends Connection
         }
         else
         {
-            die('query failed');
+            die('query failed'. self::$conn->error);
         }
     }
 
